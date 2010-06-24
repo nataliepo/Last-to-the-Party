@@ -13,6 +13,7 @@ die "Try again with your typepad username, please.  Usage: \n
 
 my $username = $ARGV[0];
 my $tp = tp($ARGV[1], $ARGV[2]);
+my $threshold_default = $ARGV[3];
 
 
 my %favorite_posts = ();
@@ -31,10 +32,10 @@ my @keys = keys(%$followers);
 print "Now collecting favorites from the " . $followers->{'totalResults'} .
    " TypePad users you follow...\n";
 
-foreach my $entry ($followers->{'entries'}) {
+foreach my $follower_item ($followers->{'entries'}) {
 
    my $limit = 1000;
-   foreach my $val (@$entry) {
+   foreach my $val (@$follower_item) {
          
       my $favs = $tp->users->favorites(parse_for_id($val->{'target'}->{'id'}));
       
@@ -87,7 +88,7 @@ my %temp;
 
 sub print_fav_posts {
    my ($fav_posts_ref) = @_;
-   my $threshold = 2;
+   my $threshold = 2 if (!$threshold_default);
    
    print "\n\n--- FAVORITE POST SUMMARY --- \n";
    
@@ -108,7 +109,7 @@ sub print_fav_posts {
 
 sub print_fav_blogs {
    my ($fav_blogs_ref) = @_;
-   my $threshold = 3;
+   my $threshold = 3 if (!$threshold_default);
    print "\n\n--- FAVORITE BLOG SUMMARY --- \n";
    
    %temp = %$fav_blogs_ref;
