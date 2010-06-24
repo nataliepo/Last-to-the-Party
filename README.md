@@ -41,3 +41,5 @@ Here's the party that I (nataliepo) am missing:
        [2] "Will the iPad usher in a golden age of UI design?" from blog "Designing Exceptional Experiences" 
 
 
+# Caveat
+This is only a listing of the favorites from the 50 TypePad Users you most recently started to follow.  Next up is how to fetch the rest of the series (example - page 2 http://api.typepad.com/users/6p00e5539faa3b8833/relationships/@following.js?max-results=50&start-index=50).
