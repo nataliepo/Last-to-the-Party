@@ -14,7 +14,7 @@ You have to have a set of API keys in order to look up this data.  It's free, an
 
        perl party.pl nataliepo myconsumerkey myconsumersecret <optional report threshold>
        
-I only show posts that have more than 3 Favorites and blogs that have more than 2 Favorites.  Don't need to know about the one-offs.
+I only show blogs that have more than 3 Favorites and posts that have more than 2 Favorites.  Don't need to know about the one-offs.
        
 
 # Sample
