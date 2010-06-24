@@ -43,7 +43,7 @@ foreach my $follower_item ($followers->{'entries'}) {
       my $num_entries = $favs->{'totalResults'};
 
       if ($num_entries) {
-         print "\t ($num_entries) " . $val->{'target'}->{'displayName'} . "...";
+         print "\t ($num_entries) " . $val->{'target'}->{'displayName'} . "...\n";
       }
 
 
