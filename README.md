@@ -1,4 +1,4 @@
-Which TypePad blogs are you missing out on?  Let's see what your friends are reading first.
+Which TypePad blogs are you missing out on?  Let's see what your friends are Favoriting the most.
 
 
 # Installation
